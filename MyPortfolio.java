@@ -27,8 +27,9 @@ class MyPortfolio {
      * the screen on one line.
      */	
 	static void printIntegerList(int[] values) {
-        int list = 
-        for i in list
+        Scanner scnr = new Scanner(System.in);
+        int list = scnr.next();
+        for(int i = 0, i > -1, i--)
         System.out.print(list)
 
 	}
