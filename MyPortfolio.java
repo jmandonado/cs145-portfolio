@@ -29,9 +29,10 @@ class MyPortfolio {
 	static void printIntegerList(int[] values) {
         Scanner scnr = new Scanner(System.in);
         int list = scnr.next();
-        for(int i = 0, i > -1, i--)
-        System.out.print(list)
-
+        for(int i = 0, i > -1, i--) {
+        
+        System.out.print(list);
+        }
 	}
 
 
