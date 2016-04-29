@@ -27,6 +27,9 @@ class MyPortfolio {
      * the screen on one line.
      */	
 	static void printIntegerList(int[] values) {
+        int list = 
+        for i in list
+        System.out.print(list)
 
 	}
 
