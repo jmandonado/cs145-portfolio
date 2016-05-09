@@ -84,7 +84,7 @@ class PortfolioApp {
 		System.out.println("Finding the average ==> ");
 		int avg = MyPortfolio.findAverage(num_list);
 
-		if (max == 58) {
+		if (avg == 58) {
 			System.out.println("PASSED");
 		} else {
 			System.out.println("FAILED");

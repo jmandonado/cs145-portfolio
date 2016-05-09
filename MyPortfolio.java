@@ -27,12 +27,12 @@ class MyPortfolio {
      * the screen on one line.
      */	
 	static void printIntegerList(int[] values) {
-        Scanner scnr = new Scanner(System.in);
-        int list = scnr.next();
-        for(int i = 0, i > -1, i--) {
+
+        for(int i = 0; i < values.length; i++) {
         
-        System.out.print(list);
+        System.out.print (values[i]);
         }
+        
 	}
 
 
@@ -41,15 +41,26 @@ class MyPortfolio {
      * ORDER to the screen on one line.
      */	
 	static void printIntegerListReversed(int[] values) {
-
-	}
+        
+        for(int i = values.length - 1; i >= 0; i--) {
+           
+        System.out.print (values[i]);
+	   }
+    }
 
     /**
      * Accepts two characters, swaps the value of left_char and right_char
      * and returns the "new" left_char.
       */	
 	static char swapLeftWithRight(char left_char, char right_char) {
-		return ' ';
+		
+    
+        char temp = right_char;
+        right_char = left_char;
+        left_char = temp;
+
+
+        return left_char;
 	}
 
     /**
@@ -58,17 +69,29 @@ class MyPortfolio {
      * containing the swapped version of the array passed in as the argument.
      */	
 	static int[] swapFirstWithLast(int[] values) {
-
+        
+            int temp = values[0];
+            values[0] = values[values.length-1];
+            values[values.length-1] = temp;
 		return values;
-	}
+     }
+	
 
     /**
      * Accepts a list of integers as an argument and returns the smallest value
      * found in the list.
      */	
 	static int min(int[] values) {
+        
+        int min = values[0];
 
-		return 0;
+        for(int i = 0; i < values.length; i++) {
+            if (values[i] < min) {
+                min = values[i];
+
+            }
+        }
+        return min;
 	}
 
     /**
@@ -76,8 +99,15 @@ class MyPortfolio {
      * found in the list.
      */	
 	static int max(int[] values) {
+        int max = values[0];
 
-		return 0;
+        for(int i = 0; i < values.length; i++) {
+            if (values[i] > max) {
+               max = values[i];
+
+            }
+        }
+        return max;
 	}
 
     /**
@@ -85,17 +115,28 @@ class MyPortfolio {
      * values found in the list.
      */	
 	static int findAverage(int[] values) {
-
-		return 0;
+        int sum = 0;
+        int average = 0;
+        for(int i = 0; i < values.length; i++) {
+		  sum = sum + values[i];
+          
+        }
+        average = sum / values.length;
+        return average;
 	}
 
     /**
      * Accepts a list of integers and an integer value as arguments and returns 
      * the number of times the integer is found in the list.
-     */	
+     */
 	static int frequencyCount(int[] values, int val) {
-
-		return 0;
+        int counter = 0;
+        for(int i = 0; i < values.length; i++) {
+            if (values[i] == val) {
+		      counter = counter +1;
+            }
+        }
+        return counter;
 	}
 
     /**
@@ -103,6 +144,11 @@ class MyPortfolio {
      */	
 	static String reverseString(String chars) {
 
-		return "\nNot implemented yet!";
-	}
+        String x = "";
+        int y = chars.length() -1;
+        for (int i = y; i >= 0; i--) {
+            x = x + chars.charAt(i);
+        }
+        return x;
+    }
 }
